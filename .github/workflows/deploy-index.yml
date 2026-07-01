@@ -1,0 +1,43 @@
+name: Generate deployment index
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deployment-index
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tree
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tree
+
+      - name: Generate tree index
+        run: |
+          tree -a -I '.git' --noreport > tree.txt
+          tree -a -I '.git' --noreport -H '.' -T 'marutsuki bucket' -o index.html
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html tree.txt
+          git commit -m "Generate deployment index" || echo "No generated changes to commit"
+
+      - name: Push deployment branch
+        run: git push origin HEAD:deployment --force
