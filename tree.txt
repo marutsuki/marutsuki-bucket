@@ -1,0 +1,45 @@
+.
+├── .github
+│   └── workflows
+│       └── deploy-index.yml
+├── CNAME
+├── README.md
+├── favicon
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   ├── apple-touch-icon.png
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon.ico
+│   └── site.webmanifest
+├── favicon-alt
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   ├── apple-touch-icon.png
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon.ico
+│   └── site.webmanifest
+├── hero.png
+├── index.html
+├── marutsuki.png
+├── profile.jfif
+├── profile.png
+├── projects
+│   ├── a-small-world.jpeg
+│   ├── art-portfolio.jpeg
+│   ├── chirper.jpeg
+│   ├── cucumber-reporting.jpeg
+│   ├── fractal-landscape-generator.png
+│   ├── main-portfolio.jpeg
+│   ├── marine-8080.jpeg
+│   ├── maru-game-of-life.jpeg
+│   ├── maru-github-viewer.jpeg
+│   ├── marutable.jpeg
+│   ├── modelling-portfolio.jpeg
+│   └── tutoring-portfolio.jpeg
+├── sitemap.xml
+├── tree.txt
+└── util
+    ├── logo.png
+    └── spinner.png
